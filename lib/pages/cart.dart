@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../modols/data.dart';
 
 class Cart extends StatelessWidget {
