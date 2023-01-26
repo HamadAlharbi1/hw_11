@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../contents/cart_content.dart';
 import '../modols/data.dart';
 
 class Cart extends StatelessWidget {
@@ -19,32 +20,7 @@ class Cart extends StatelessWidget {
                     child: SizedBox(
                       height: 500,
                       width: 300,
-                      child: Column(
-                        children: [
-                          Image(
-                            image: NetworkImage(product.image),
-                            height: 280,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 15),
-                            child: Text(
-                              product.name,
-                              style: const TextStyle(color: Colors.grey, fontSize: 20),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 15),
-                            child: Row(
-                              children: [
-                                Text(
-                                  product.price,
-                                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
+                      child: cart_content(product: product),
                     ),
                   ),
               ],
